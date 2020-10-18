@@ -1,14 +1,11 @@
 from setuptools import setup, find_packages
 
-file = open('readme.md', 'r')
-longDisc = file.read()
-file.close()
 
 setup(
     name='xlsAsData',
     version='0.0.1',
     description='a method of of useing xls as a datasource',
-    long_description=longDisc,
+    long_description='',
     long_description_content_type="text/markdown",
     author='postitnotenija',
     url='https://github.com/MechaCoder/',
