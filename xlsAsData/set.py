@@ -25,9 +25,11 @@ class Set:
 
         # adds content
         row_i = 2
+        newrows = []
         for row in data:
             if 'uuid' not in row.keys():
-                row['uuid'] = str(uuid1()) # bugfix to stop the uuid changeing 
+                row['uuid'] = str(uuid1()) # bugfix to stop the uuid changeing
+                newrows.append(row['uuid'])
 
 
             col_i = 0
@@ -44,3 +46,4 @@ class Set:
             
         wb.save(self.path)
         wb.close()
+        return newrows

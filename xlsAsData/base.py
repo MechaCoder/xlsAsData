@@ -22,9 +22,9 @@ class XlsAsData:
         data.append(newRow)
 
         setObj = Set(self.path, self.headers)
-        setObj.insert(data=data)
+        newUuids = setObj.insert(data=data)
 
-        return True
+        return newUuids
 
     def read(self) -> list:
         """ reurns all rows as a list dict """
