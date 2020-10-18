@@ -26,7 +26,10 @@ class Set:
         # adds content
         row_i = 2
         for row in data:
-            row['uuid'] = str(uuid1())
+            if 'uuid' not in row.keys():
+                row['uuid'] = str(uuid1()) # bugfix to stop the uuid changeing 
+
+
             col_i = 0
 
             if isinstance(row, dict) == False:
